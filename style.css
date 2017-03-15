@@ -1,0 +1,273 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    cursor: crosshair;
+    overflow: auto;
+}
+
+@font-face {
+    font-family: "impact";
+    src: url("files/font/impact.ttf");
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.bio {
+    font-size: 13px;
+}
+
+.menu {
+    font-family: "impact";
+    text-transform: uppercase;
+    font-size: 91px;
+    line-height: 81px;
+    width: 230px;
+    /*cursor: url(http://www.liqvd.asia/images/cross_thin.png), auto;*/
+}
+
+.menu a:hover {
+    /*cursor: url(http://www.liqvd.asia/images/cross_thin.png), auto;*/
+}
+
+#menustill {
+    position: absolute;;
+    top: 15%;
+    margin-left: 14%;
+    animation-name: menumoveright;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    z-index: 99999999;
+}
+
+#menumove {
+    position: absolute;
+    top: 15%;
+    margin-left: 16%;
+    animation-name: menumoveleft;
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    z-index: 99999998;
+}
+
+@keyframes menumoveleft {
+    0% {
+        margin-left: :16%;
+    }
+
+    99% {
+      margin-left: 14.93%;
+    }
+
+    100% {
+        margin-left: 15%;
+    }
+}
+
+@keyframes menumoveright {
+    0% {
+        margin-left: :14%;
+    }
+
+    100% {
+        margin-left: 15%;
+    }
+}
+
+#airtransporttext {
+    position: fixed;
+    z-index: +2000;
+}
+
+
+/*#video1 {
+    top: 300px;
+    left: 10px;
+    position: fixed;
+    width: 20%;
+    z-index: -1000;
+}
+
+#video2 {
+    top: 250px;
+    left: 720px;
+    position: fixed;
+    width: 40%;
+    z-index: -2331;
+}*/
+
+.ballon {
+    opacity: 0;
+    top: 100px;
+    left: 800px;
+    position: fixed;
+    width: 20%;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.ballon:hover {
+    opacity: 1;
+    z-index: 3000;
+}
+
+.whitesands {
+    opacity: 0;
+    top: 5%;
+    left: 500px;
+    position: fixed;
+    width: 20%;
+    z-index: 2000;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.whitesands:hover {
+    opacity: 1;
+}
+
+.globe {
+    opacity: 0;
+    top: 25%;
+    left: 70%;
+    position: fixed;
+    width: 20%;
+    z-index: 3000;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.globe:hover {
+    opacity: 0.9;
+    z-index: 3000;
+}
+
+.airtransport {
+    opacity: 0;
+    top: 38%;
+    left: 50%;
+    position: fixed;
+    width: 40%;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.airtransport:hover {
+    opacity: 0.9;
+    z-index: 3000;
+}
+
+.scrolling {
+    opacity: 0;
+    top: 75%;
+    position: fixed;
+    width: 7%;
+    z-index: 1000;
+    left: 0%;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+#scroll1 {
+    position: fixed;
+    width: 7%;
+    left: 0%;
+}
+
+#scroll2 {
+    position: fixed;
+    width: 7%;
+    left: 7%;
+}
+
+#scroll3 {
+    position: fixed;
+    width: 7%;
+    left: 13.8%;
+}
+
+.scrolling:hover {
+    opacity: 1.1;
+    z-index: 3000;
+    width: 30%;
+    left: 0%;
+}
+
+.white_content {
+    display: none;
+    position:fixed;
+    top: 15%;
+    left: 30%;
+    width: 30%;
+    height: 70%;
+    padding: 16px;
+    background-color:none;
+    z-index: 10000002;
+    overflow: auto;
+    font-family: "impact";
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.bio {
+margin-bottom:100px;
+}
+
+/*html.rotateme {
+     -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+}*/
+
+.airtransportvideo {
+  position:absolute;
+  width:100%;
+}
+
+#hellobye {
+  width:100%;
+}
+
+.typewriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: normal; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
